@@ -259,3 +259,19 @@ elif(choice ==4):
     print(f"div of {a} and {b} ",div_two(a,b))
 else:
     print("kallu dengaya ra")
+
+"""arguments are the neccesary values to perform functions
+1.positional argument
+2.keyword argument
+3.default argument
+4.variable length argument
+
+
+1. These are the arguments which takes the argument according to positions"""
+
+
+"""def sample(a,b):
+    for i in a:
+        print(i)
+    print(b)
+sample("hello",10)"""
