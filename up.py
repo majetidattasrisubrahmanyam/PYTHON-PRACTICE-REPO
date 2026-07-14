@@ -275,3 +275,42 @@ else:
         print(i)
     print(b)
 sample("hello",10)"""
+
+"""
+decorator is a function which is used to add some additional functionality to the function 
+in decorator there are of 2 types
+
+built in 
+user defined decorators
+
+built in:-These are the decorators which is developed by developers to doo some specific task
+
+example:- @classmethod
+@staticmethod
+@properties
+
+
+userdefined decorators:- these are the decorators which are created by users according to their requirments
+
+
+syntax:-
+def sample(func):
+    def inner():
+        pre_task
+        func()
+        post_task
+    return inner
+"""
+
+
+def recharge():
+    print("recharge successful")
+
+
+def shop(func):
+    print("checking amount is credited or not")
+    print("amount credited")
+    func()
+    print("thank you for the recharge ")
+
+shop(recharge)
