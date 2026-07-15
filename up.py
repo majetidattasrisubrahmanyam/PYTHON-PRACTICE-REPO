@@ -215,51 +215,49 @@ add_two"""
     return sum
 
 print(add_two)"""
+"""while True:
+    def lengthstring(a):
+        s = len(a)
+        return s
 
+    print(lengthstring("subbu"))
 
-def lengthstring(a):
-    s = len(a)
-    return s
+    def add_two(n,m):
+        
+        sum = n+m
+        return sum
 
-print(lengthstring("subbu"))
-
-def add_two(n,m):
+    def sub_two(n,m):
     
-    sum = n+m
-    return sum
-
-def sub_two(n,m):
-   
-    sum = n-m
-    return sum
+        sum = n-m
+        return sum
 
 
-def mul_two(n,m):
-  
-    sum = n*m
-    return sum
+    def mul_two(n,m):
+    
+        sum = n*m
+        return sum
 
 
-def div_two(n,m):
-    sum = n/m
-    return sum
+    def div_two(n,m):
+        sum = n/m
+        return sum
 
 
-a = int(input("enter number one :"))
-b = int(input("enter other number :"))
+    a = int(input("enter number one :"))
+    b = int(input("enter other number :"))
 
-choice = int(input("1.add,2.sub,3.mul,4.div:"))
-if(choice == 1):
-    print(f"sum of {a} and {b} is:-",add_two(a,b))
-elif(choice==2):
-    print(f"sub of {a} and {b} ",sub_two(a,b))
-elif(choice==3):
-    print(f"mul of {a} and {b} ",mul_two(a,b))
-elif(choice ==4):
-    print(f"div of {a} and {b} ",div_two(a,b))
-else:
-    print("kallu dengaya ra")
-
+    choice = int(input("1.add,2.sub,3.mul,4.div:"))
+    if(choice == 1):
+        print(f"sum of {a} and {b} is:-",add_two(a,b))
+    elif(choice==2):
+        print(f"sub of {a} and {b} ",sub_two(a,b))
+    elif(choice==3):
+        print(f"mul of {a} and {b} ",mul_two(a,b))
+    elif(choice ==4):
+        print(f"div of {a} and {b} ",div_two(a,b))
+    elif(choice ==5):
+        break+"""
 """arguments are the neccesary values to perform functions
 1.positional argument
 2.keyword argument
@@ -275,6 +273,35 @@ else:
         print(i)
     print(b)
 sample("hello",10)"""
+
+"""4.variable length arguments:
+packing and unpacking
+packing:-
+packing multiple values into  a single variable is known as packing
+def sample(*a):
+    print(a)
+
+sample(1,2)"""
+
+"""
+unpacking is used to unpack functions from collections and distribute among arguments
+def sample(a,b,c):
+    print(a)
+    print(b)
+    print(c)
+
+sample(*[10,20,30])"""
+
+
+"""def prabhas(a,b):
+    sum = a+b
+    
+    def bhagya(x,y):
+        sum = x+y
+        return sum14
+    return sum
+print(prabhas(50,60))"""
+
 
 """
 decorator is a function which is used to add some additional functionality to the function 
@@ -303,7 +330,7 @@ def sample(func):
 """
 
 
-def recharge():
+"""def recharge():
     print("recharge successful")
 
 
@@ -313,4 +340,4 @@ def shop(func):
     func()
     print("thank you for the recharge ")
 
-shop(recharge)
+shop(recharge)"""
