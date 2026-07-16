@@ -341,3 +341,80 @@ def shop(func):
     print("thank you for the recharge ")
 
 shop(recharge)"""
+
+
+"15-july"
+
+"""global and local variable
+global variable it can bee accesible every where inside the function or outside function or nested functio
+anywhere
+local variable can be accesible inside the function and nested function
+non local variable cannot be accessed outside function
+"""
+
+"""a= 100
+def sample():
+    a=10
+    print(a)
+    def sample1():
+        c=12
+        print(a)    
+    sample1()
+    
+sample()
+print(a)"""
+
+"""
+global variable inside function
+use a keyword called global :
+a= 100
+def sample():
+    global a
+    a=10
+    print(a)
+    def sample1():
+        c=12
+        print(a)    
+    sample1()
+    
+sample()
+print(a)"""
+
+
+"""
+modification of local variable by being inside nested function nonlocal inside function
+use a keyword called nonlocal :"""
+"""a= 100
+def sample():  
+    b=10 
+    def sample1():
+        nonlocal b
+        b=900
+        print(b)    
+    sample1()
+    print(b)
+sample()
+print()"""
+
+
+"""def strong(n):
+    temp = n
+    total = 0
+    while n > 0:
+        rem = n % 10
+        i = 1
+        fact = 1
+        while i <= rem:
+            fact = fact * i
+            i += 1
+        total += fact
+        n = n // 10
+    if total == temp:
+        print("Strong Number")
+    else:
+        print("Not a Strong Number")
+
+strong(145)
+strong(143)"""
+
+"modification of global variable inside function"
