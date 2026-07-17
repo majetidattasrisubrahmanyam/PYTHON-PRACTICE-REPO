@@ -418,3 +418,28 @@ strong(145)
 strong(143)"""
 
 "modification of global variable inside function"
+
+
+"***key word arguments "
+"""" it Is used to take key words arguments pair as input it will store the values in dictionary formats
+def sample(**a):
+    print(a)
+
+sample(name = "subbu",age=21,phone = 3333333)
+output:{'name': 'subbu', 'age': 21, 'phone': 3333333}
+"""
+
+"""def sample2(*a):
+    print(a)
+sample2(10,20,30,b=20)
+this actually throw  an error soo we are using 
+the keywords arguments on above """
+
+"""example for both postional arguments and keyword arguments"""
+"""def sample(*a,**b):
+    print(a)
+    print(b)
+
+sample(10,20,40,name = "subbu" ,age = 21)
+output format = (10, 20, 40)
+{'name': 'subbu', 'age': 21}"""
