@@ -443,3 +443,61 @@ the keywords arguments on above """
 sample(10,20,40,name = "subbu" ,age = 21)
 output format = (10, 20, 40)
 {'name': 'subbu', 'age': 21}"""
+
+
+without decorator function calling
+def jiofamily(func):
+    def inner():
+        print("Checking amount credited or not")
+        print("Amount credited successfully")
+        func()                   
+        print("Thank you for using Jio")
+    return inner
+
+
+
+def recharge1():
+    print("Recharge of 149 is successful")
+recharge1 = jiofamily(recharge1)
+
+
+def recharge2():
+    print("Recharge of 299 is successful")
+recharge2 = jiofamily(recharge2)
+
+
+
+def recharge3():
+    print("Recharge of 549 is successful")
+recharge3 = jiofamily(recharge3)
+
+
+print("1. 149 plan")
+print("2. 299 plan")
+print("3. 549 plan")
+
+choice = int(input("Enter the plan to select: "))
+
+if choice == 1:
+    recharge1()
+elif choice == 2:
+    recharge2()
+elif choice == 3:
+    recharge3()
+else:
+    print("Invalid Choice")"""
+
+"""class and object creation
+
+class subbu:
+    ename  =  "subbu"
+    age  =20
+    father = "xxxx"
+    mom = "yyyy"
+
+
+sri = subbu()
+
+
+print(sri.age)
+"""
