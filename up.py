@@ -501,3 +501,53 @@ sri = subbu()
 
 print(sri.age)
 """
+
+class car:
+
+    wheels = 4
+    fueltank = 1
+    engine = 1
+    steering = 1
+    sidemirrors = 2
+    headlights = 2
+
+    def addval(self, key, value):
+        self.__dict__[key] = value
+       
+
+
+tata = car()
+bmw = car()
+
+"""tata.speed = 150
+bmw.speed = 250
+
+tata.spoiler = 0
+bmw.spoiler = 1
+
+tata.horsepower = "5000hp"
+bmw.horsepower = "9000hp"
+
+tata.torque = 2000
+bmw.torque = 3000
+"""
+
+n = int(input("Enter the no of changes: "))
+
+for i in range(n):
+    cls = input("Enter cls: ")
+    key = input("Enter key: ")
+    value = input("Enter value: ")
+
+    if cls == "tata":
+        tata.addval(key, value)
+
+    elif cls == "bmw":
+        bmw.addval(key, value)
+
+    else:
+        print("Invalid car")
+
+
+print("tata = ",tata.__dict__)
+print("bmw = ",bmw.__dict__)
