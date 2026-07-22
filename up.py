@@ -551,3 +551,73 @@ for i in range(n):
 
 print("tata = ",tata.__dict__)
 print("bmw = ",bmw.__dict__)
+
+
+
+"""class Bank:
+    bank_name = "Union Bank"
+    bank_location = "KPHB"
+    ifsc_code = "1234"
+    manager = "Arjun"
+    roi = "6.26%"
+
+
+def add_data(self, key, val):
+    self.__dict__[key] = val
+
+
+def printv(obj):
+    print("\nObject Data:")
+    print(obj.__dict__)
+
+    print("\nClass Data:")
+    print(Bank.__dict__)
+
+
+subbu = Bank()
+
+
+print("1. Add Data")
+print("2. Modify Data")
+print("3. Display Data")
+
+s = int(input("Enter the option: "))
+
+if s == 1:
+    changes = int(input("Enter number of changes: "))
+    for i in range(changes):
+        key = input("Enter key: ")
+        value = input("Enter value: ")
+        add_data(subbu, key, value)
+        printv(subbu)
+
+elif s == 2:
+    key = input("Enter key value: ")
+    value = input("Enter new value: ")
+    add_data(subbu, key, value)
+    printv(subbu)
+
+elif s == 3:
+    printv(subbu)
+
+else:
+    print("Invalid option")
+"""
+
+
+
+data = {
+    "name": "Subbu",
+    "age": 20,
+    "city": "Hyderabad"
+}
+
+class Student:
+    def __init__(self, name, age, city):
+        self.name = name
+        self.age = age
+        self.city = city
+
+obj = Student(**data)
+
+print(obj.__dict__)
