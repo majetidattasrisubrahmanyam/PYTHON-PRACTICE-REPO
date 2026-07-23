@@ -621,3 +621,40 @@ class Student:
 obj = Student(**data)
 
 print(obj.__dict__)
+
+
+##CONSTRUCTER METHOD
+"""class student:
+    ins = "spider"
+    loc = "jntu"
+
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+        print(self.name)
+        print(self.age)
+
+subbu = student("subbu",20)"""
+
+##static method
+
+class student:
+    ins = "pyspider"
+    loc = "jntu"
+
+    def __init__(self):
+        self.name = self.get_name()
+        self.age = self.get_age()
+
+    @staticmethod
+    def get_name():
+        return input("Enter the name")
+    
+    @staticmethod
+    def get_age():
+        return int(input("Enter the age"))
+
+    def display(self):
+        print(self.name,self.age)
+
+
