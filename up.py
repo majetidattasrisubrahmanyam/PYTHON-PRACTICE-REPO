@@ -685,3 +685,87 @@ oa = B(10,2,3,4,5)
 print(oa.display())
 
 
+"""class A:
+    a=10
+    b=20
+    def __init__(self,c,d):
+        self.c = c
+        self.d = d
+
+    def display(self):
+        print(self.c,self.d)
+
+
+class B(A):
+    a=90
+    def __init__(self,c,d,e,f,g):
+        super().__init__(c,d)
+        self.e = e
+        self.f=f
+        self.g=g
+
+    def display(self):
+        super().display()
+        print(self.e,self.f,self.g)
+
+class C(B):
+    def __init__(self,c,d,e,f,g,h,i):
+        super().__init__(c,d,e,f,g)
+        self.h = h
+        self.i = i
+    
+    def display(self):
+        super().display()
+        print(self.h,self.i)
+
+oa = C(10,2,3,4,5,0,100)
+print(oa.display())"""
+
+class Resume10th:
+    def __init__(self, name, marks10):
+        self.name = name
+        self.age = 15
+        self.marks10 = marks10
+
+    def display(self):
+        print(self.name, self.age, self.marks10)
+
+
+class Resume12th(Resume10th):
+    def __init__(self, name, marks10, marks12, phone):
+        super().__init__(name, marks10)
+        self.age = 17
+        self.marks12 = marks12
+        self.phone = phone
+
+    def display(self):
+        super().display()
+        print(self.age, self.marks12, self.phone)
+
+
+class ResumeEngineering(Resume12th):
+    def __init__(self, name, marks10, marks12, phone, cgpa):
+        super().__init__(name, marks10, marks12, phone)
+        self.age = 21
+        self.cgpa = cgpa
+
+    def display(self):
+        super().display()
+        print(self.age, self.cgpa)
+
+
+
+obj1 = Resume10th("Subrahmanyam", 600)
+obj2 = Resume12th("Subrahmanyam", 600, 921, "918278XXX")
+obj3 = ResumeEngineering("Subrahmanyam", 600, 921, "919978XXX", 8.5)
+
+print("10th Resume")
+obj1.display()
+
+print("\n12th Resume")
+obj2.display()
+
+print("\nEngineering Resume")
+obj3.display()
+
+
