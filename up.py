@@ -769,3 +769,79 @@ print("\nEngineering Resume")
 obj3.display()
 
 
+
+class ShoppingCart:
+    products = {
+        "iphone": 6,
+        "imac": 3,
+        "ipad": 2,
+        "iwatch": 1
+    }
+
+    prices = {
+        "iphone": 900,
+        "imac": 500,
+        "ipad": 300,
+        "iwatch": 400
+    }
+
+    def __init__(self):
+        self.cart = []
+
+    def add_user(self):
+        self.name = input("Enter your name")
+        self.email = input("Enter your email")
+        self.phoneno = input("Enter your number")
+
+    def display(self):
+        print(self.name)
+        print(self.email)
+        print(self.phoneno)
+
+    def add_items(self, name, quantity):
+        if name not in ShoppingCart.products:
+            raise Exception(f"Cannot add product '{name}'")
+
+        if quantity > ShoppingCart.products[name]:
+            raise Exception("Quantity out of stock")
+
+        item = {
+            "name": name,
+            "quantity": quantity,
+            "price": ShoppingCart.prices[name] * quantity
+        }
+
+        self.cart.append(item)
+        ShoppingCart.products[name] -= quantity 
+
+    
+
+    def remove_item(self, name):
+        for item in self.cart:
+            if item["name"] == name:
+                if item["quantity"] == 1:
+                    self.cart.remove(item)
+                else:
+                    item["quantity"] -= 1
+                    item["price"] -= ShoppingCart.prices[name]
+
+                ShoppingCart.products[name] += 1
+                return
+
+        print("Item not found in cart.")
+
+
+
+subbu = ShoppingCart()
+subbu.add_user()
+subbu.display()
+subbu.add_items("iphone", 5)
+subbu.add_items("ipad", 2)
+
+subbu.remove_item("iphone")
+
+##subbu.display_cart()
+
+print("\nRemaining Stock:")
+print(ShoppingCart.products)
+
