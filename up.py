@@ -845,3 +845,63 @@ subbu.remove_item("iphone")
 print("\nRemaining Stock:")
 print(ShoppingCart.products)
 
+
+"""def bubble_sort(l):
+    n= len(l)
+    for i in range(n-1):
+        for j in range(n-1):
+            if l[j] > l[j+1]:
+                temp = l[j]
+                l[j] = l[j+1]
+                l[j+1] = temp
+    print(l)
+
+l = [10,25,33,2,7]
+bubble_sort(l)
+
+a = ['apple','mangoshake','banana','ant']
+bubble_sort(a)"""
+
+
+from abc import ABC , abstractmethod
+
+class payment(ABC):
+    @abstractmethod
+    def validate(self):
+        pass
+
+    @abstractmethod
+    def pay(self):
+        pass
+
+    def receipt(self,amount):
+        return f"payment of ${amount} sucessfull"
+
+
+class creditcardpayment(payment):
+    def validate(self):
+        print("validating the credit card.....")
+
+    def pay(self,amount):
+        print(f"paying ${amount} via credit card")
+
+
+class paypalpayment(payment):
+    def validate(self):
+        print("logging into paypal....")
+
+    def pay(self,amount):
+        print(f"paying ${amount} via paypal")
+
+class paymentservice:
+    def process_payment(self,payment,amount):
+        payment.validate()
+        payment.pay(amount)
+        print(payment.receipt(amount))
+
+
+service = paymentservice()
+cred_payment = creditcardpayment()
+paypal_payment = paypalpayment()
+
+pay = service.process_payment(paypal_payment,1000)
