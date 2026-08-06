@@ -905,3 +905,75 @@ cred_payment = creditcardpayment()
 paypal_payment = paypalpayment()
 
 pay = service.process_payment(paypal_payment,1000)
+
+
+a = [1,2,3,4,5,6,7,8,9]
+
+def even_number(a, i=0, b=[]):
+
+    if i == len(a):
+        return b
+
+    if a[i] % 2 == 0:
+        b.append(a[i])
+
+    return even_number(a, i + 1, b)
+
+print(even_number(a))
+
+
+z = "12hello24"
+
+def sum_number_string(a,i=0,sum=0):
+    if i == len(z):
+        return sum
+
+    if '0' <= z[i] <= '9':
+        sum += int(z[i])
+
+    return sum_number_string(a,i+1,sum)
+
+print(sum_number_string(z))
+
+x = "ab932@$mn6pq#!*rs"
+alpha = ''
+number = ''
+special = ''
+
+def seperate(x, alpha, number, special, i=0):
+    if i == len(x):
+        return alpha,number,special
+
+    if('0' <= x[i] <= '9'):
+        number+=x[i]
+    elif('a' <= x[i] <= 'z'):
+        alpha+=x[i]
+    else:
+        special+=x[i]
+
+    return seperate(x,alpha,number,special,i=i+1)
+
+print(seperate(x,'','',''))
+    
+fruit = "banana"
+ch = "a"
+count =0
+def find(fruit,ch,count,i=0,):
+    if(i == len(fruit)):
+        return count
+
+    if(fruit[i] == ch):
+        count+=1
+
+    return find(fruit,ch,count,i=i+1)
+
+print(find(fruit,ch,count))
+
+def number(i=0):
+    if i==10:
+        return i
+    print(i)
+
+    return number(i=i+1)
+
+print(number(0))
