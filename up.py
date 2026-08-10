@@ -968,6 +968,59 @@ def find(fruit,ch,count,i=0,):
     return find(fruit,ch,count,i=i+1)
 
 print(find(fruit,ch,count))
+##private public and protected
+"""class s:
+    __a=10
+    _b=20
+
+    def __init__(self,c):
+        self.c=c
+
+    def __display(self):
+        print(self.a,self.b,self.c)
+
+    @classmethod
+    def ch_a(cls,new_a):
+        cls.a = new_a
+    @staticmethod
+    def msg():
+        print("hello")
+
+oa = s(30)
+
+print(s._s__display)
+
+print(s._s__a)"""
+
+"""class teacher:
+    
+    def __init__(self,teacher):
+        self.teacher = teacher
+
+    def display(self):
+        print("teacher name is ", self.teacher)
+
+class student(teacher):
+    def __init__(self,tecaher,studentname):
+        super().__init__(teache r)
+        self.studentname = studentname
+
+    def display(self):
+        super().display()
+        print("student name is ",self.studentname)
+
+s=student("ramesh","subbu")
+s.display()"""
+
+"""s = "aaabbbccdd"
+dict = {}
+for i in s:
+    if i in dict:
+        dict[i]+=1
+    else:
+        dict[i] =1
+
+print(dict)
 
 def number(i=0):
     if i==10:
@@ -977,3 +1030,4 @@ def number(i=0):
     return number(i=i+1)
 
 print(number(0))
+
