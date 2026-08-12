@@ -1,4 +1,4 @@
-"""s = "AB1[+2@pq631$mn9!"
+  """s = "AB1[+2@pq631$mn9!"
 
 uppercase = ""
 lowercase = ""
@@ -1029,5 +1029,100 @@ def number(i=0):
 
     return number(i=i+1)
 
-print(number(0))
+print(number(0))"""
+
+#specific exception
+"""def fun():
+    try:
+        a = int(input("Enter the first number :"))
+        b = int(input("Enter the second number :"))
+        res = a/b
+        print(res)
+    except ZeroDivisionError:
+        print("Input should  not be zero")
+        fun()
+    
+fun()"""
+
+##Generic Exception
+"""def fun():
+    try:
+        a = int(input("Enter the first number :"))
+        b = int(input("Enter the second number :"))
+        res = a/b
+        print(res)
+    except Exception:
+        print("handled")
+        fun()
+    
+fun()"""
+
+
+##default exception
+
+"""def fun():
+    try:
+        a = int(input("Enter the first number :"))
+        b = int(input("Enter the second number :"))
+        res = a/b
+        print(res)
+    except:
+        print("handled")
+        fun()
+    
+fun()"""
+
+
+##custom exception
+
+"""a=10
+b=20
+
+
+if(a>b):
+    print("a is greater")
+else:
+    raise ZeroDivisionError("A should be greater")"""
+
+##assert
+
+"""a=10
+b=20
+assert a>b,("a is smaller")
+print("a is bigger")"""
+
+
+##user defined error
+
+"""class lengtherror(Exception):
+    pass
+
+n = input("Enter the name :")
+if len(n) != 10:
+    raise lengtherror("Enter 10 chararcter name")"""
+
+##higher order functions
+
+##syntax varname = lambda args1,args2,...argsn:return value
+##print(varname(args1))
+"""res = lambda n:n%2==0
+print(res(10))"""
+
+
+"""res = lambda st,ch,count : ch in st
+print(res("banana","a"))"""
+
+"""res = lambda a,b,c:a+b+c
+print(res(1,2,3))"""
+
+"""res = lambda a,b,c,d=1,e=1 :a*b*c*d*e
+print(res(1,2,3))
+print(res(1,2,3,4,5))"""
+
+"""res = lambda a:not(a.isalnum())
+print(res('9'))
+print(res("A"))
+print(res('a'))
+print(res('@'))
+print(res('$'))"""
 
