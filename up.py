@@ -1126,3 +1126,60 @@ print(res('a'))
 print(res('@'))
 print(res('$'))"""
 
+
+
+"""a=1
+res = map(lambda a:a*a ,range(a,101))
+print(list(res))"""
+
+"""b=['apple','mango','banana']
+print(list(map(lambda b:b.upper(),b)))"""
+
+"""a=[1,2,3,4,5]
+print(list(map(lambda x:"even"if x%2==0 else "odd",a)))"""
+
+"""a=[1,2,3,4,5]
+b=[6,7,8,9,10]
+c =[]
+for i in range(0,len(a)):
+    c.append(a[i]+b[i])
+
+print(c)
+print(list(map(lambda x,y : x+y,a,b)))"""
+
+"""###string , len(string)
+a = ["hi","hello","goodmorning"]
+print(list(map(lambda a:(a,len(a)),a)))
+
+##+ve means square -ve means abs of it 
+b = [6,4,-2,3,-5,9]
+print(list(map(lambda b: b*b if(b>=0) else abs(b) ,b)))
+
+##total marks
+maths = [60,70,90]
+science = [75,85,69]
+english = [55,90,66]
+
+print(list(map(lambda maths,science,english:maths+science+english,maths,science,english)))
+
+##total amount after 10% discount on each
+prices = [1000,2000,3000,4000]
+print(list(map(lambda prices:abs(prices *0.1 - prices),prices)))"""
+
+
+
+"""marks = [94, 75, 64, 56, 66, 73, 97, 30, 45, 24]
+
+print(list(map(
+    lambda marks: "A" if 80 <= marks <= 100
+    else "B" if 60 <= marks <= 79
+    else "C" if 35 <= marks <= 59
+    else "fail",
+    marks
+)))"""
+
+
+
+
+"""res = filter(lambda a:a%2==0,range(1,50))
+print(list(map(lambda res:res**3 ,res)))"""
